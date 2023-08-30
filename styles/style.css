@@ -8,7 +8,7 @@ header
     display: flex;
     height: 75px;
     width: 100vw;
-    gap:5px;
+    gap:4px;
     background-color: #000000;
     
 }
@@ -22,3 +22,4 @@ footer
 {
     background: #191919;
 }
+
