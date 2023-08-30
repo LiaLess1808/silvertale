@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat&family=Noto+Sans:ital,wght@0,900;1,400&family=Ubuntu&display=swap');
 
 *
 {
@@ -10,9 +10,10 @@ header
 {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
-    width: 100vw;
+    width: auto;
     gap:4px;
     background-color: #000000;
     padding:20px 20px 20px 30px;
@@ -103,10 +104,16 @@ header
             {
                 text-decoration: none;
                 color: #ffffff;
-                font-family: 'Montserrat';
+                font-family: 'Noto Sans';
                 font-size: 20px;
-                font-weight: bolder;
+                font-weight: 900;
             }
+    header .right
+    {
+        display:flex;
+        flex-direction: row;
+        gap:20px;
+    }
 
 main
 {
