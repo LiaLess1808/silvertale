@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat&family=Ubuntu&display=swap');
+
 *
 {
     margin:0;
@@ -7,20 +9,113 @@
 header
 {
     display: flex;
-    height: 75px;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
     width: 100vw;
     gap:4px;
     background-color: #000000;
-    
+    padding:20px 20px 20px 30px;
 }
+    header .left
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:40px;
+    }
+        header .menu
+        {
+            height:45px;
+            width: 45px;
+            border-radius: 12px;
+            border: 4px solid #47688F;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .icon-menu {
+                --gap: 5px;
+                --height-bar: 4px;
+                --pos-y-bar-one: 0;
+                --pos-y-bar-three: 0;
+                --scale-bar: 1;
+                --rotate-bar-one: 0;
+                --rotate-bar-three: 0;
+                
+                width: 36px;
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items: center;
+                gap: var(--gap);
+                cursor: pointer;
+                position: relative;
+            }
+                .bar 
+                {
+                    position: relative;
+                    height: var(--height-bar);
+                    width: 75%;
+                    border-radius: .5rem;
+                    background-color: #ffffff;
+                }
+                    .bar--1 
+                    {
+                        top: var(--pos-y-bar-one);
+                        transform: rotate(var(--rotate-bar-one));
+                        transition: top 200ms 100ms, transform 100ms;
+                    }
+                    .bar--2 
+                    {
+                        transform: scaleX(var(--scale-bar));
+                        transition: transform 150ms 100ms;
+                    }
+                    .bar--3 
+                    {
+                        bottom: var(--pos-y-bar-three);
+                        transform: rotate(var(--rotate-bar-three));
+                        transition: bottom 200ms 100ms, transform 100ms;
+                    }
+                        .check-icon:checked + .icon-menu > .bar--1 
+                        {
+                            transition: top 200ms, transform 200ms 100ms;
+                        }
+                        .check-icon:checked + .icon-menu > .bar--3 
+                        {
+                            transition: bottom 200ms, transform 200ms 100ms;
+                        }
+                        .check-icon:checked + .icon-menu 
+                        {
+                            --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+                            --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+                            --scale-bar: 0;
+                            --rotate-bar-one: 45deg;
+                            --rotate-bar-three: -45deg;
+                        }
+        header .links
+        {
+            display:flex;
+            gap:20px;
+            padding: 0 30px 0 10px;
+        }
+            header .links a
+            {
+                text-decoration: none;
+                color: #ffffff;
+                font-family: 'Montserrat';
+                font-size: 20px;
+                font-weight: bolder;
+            }
 
 main
 {
-    background:#000000;
+    height:120vh;
+    background:#b2ddb2;
 }
 
 footer
 {
-    
+    height:30vh;
     background: #191919;
 }
