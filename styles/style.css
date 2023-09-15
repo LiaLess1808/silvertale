@@ -119,11 +119,30 @@ header
         flex-direction: row;
         gap:20px;
     }
-
-main
+.inicio
 {
-    height:120vh;
-    background:#b2ddb2;
+    position: relative;
+    display: flex;
+}
+ .guara-gif
+{
+    width:100%;
+    height: 100%;
+}
+ .watch
+{
+    height:4.5rem;
+    position:absolute;
+    bottom: 0;
+    
+}
+.trailer
+{
+    
+}
+.about-text
+{
+    height:7rem;
 }
 
 footer
