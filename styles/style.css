@@ -131,14 +131,21 @@ header
 }
  .watch
 {
-    height:4.5rem;
+    height:100%;
+    width:100%;
     position:absolute;
     bottom: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
     
 }
 .trailer
 {
-    
+    width:100%;
+    height:100%;
+    z-index: 10;
 }
 .about-text
 {
