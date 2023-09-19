@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <meta charset = "UTF-8">
+        <meta name = "viewport" 
+              content = "width=device-width, 
+                        initial-scale=1.0"
+              >
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="styles/style.css">
         
         <link rel="icon" href="assets/silvertale-logo-icon-transformed.png">
@@ -46,8 +49,12 @@
 
             <div class="right">
                 <div class="search-bar">
-                    <input type="text">
-                    <!--icon-->
+                    <div class="container-input" id = "search-bar">
+                        <input type="text" placeholder="Pesquisar" name="text" class="input">
+                        <svg fill="#ffffff" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+                      </svg>
+                    </div>
                 </div>
     
                 <div class="lang">
@@ -67,8 +74,7 @@
                 <img class="guara-gif" src="assets/Guará.png" alt="Fundo da Página inicial">
 
                 <div class="watch">
-
-                    <!--icon-->
+                    <button>ASSISTIR AO TRAILER <i class='bx bx-play-circle'></i> </button>
                     <video src="" class="trailer"></video>
                 </div>
             </div>
@@ -137,5 +143,6 @@
                 </div>
             </div>
         </footer>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </body>
 </html>

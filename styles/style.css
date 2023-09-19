@@ -93,6 +93,7 @@ header
                             --rotate-bar-one: 45deg;
                             --rotate-bar-three: -45deg;
                         }
+        header 
         header .links
         {
             display:flex;
@@ -105,7 +106,7 @@ header
                 text-decoration: none;
                 color: #ffffff;
                 font-family: 'Inter';
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 900;
                 transition: transform 80ms ease-in;
             }
@@ -119,6 +120,56 @@ header
         flex-direction: row;
         gap:20px;
     }
+        header .right .search-bar
+        {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-input {
+            position: relative;
+        }
+            
+            .input {
+                width: 150px;
+                padding: 10px 0px 10px 40px;
+                border-radius: 9999px;
+                border: solid 1px #333;
+                transition: all .2s ease-in-out;
+                outline: none;
+                opacity: 0.8;
+                background-color: #313131;
+                color:#ffffff;
+            }
+            
+                .container-input svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translate(0, -50%);
+                    
+                }
+                
+                    .input:focus {
+                        opacity: 1;
+                        width: 250px;
+                    }
+        header .right .download
+        {
+            background:#000000;
+            border:#47688F solid 4px;
+            border-radius: 12px;
+            color:#ffffff;
+            padding:10px;
+            font-family: 'Inter';
+            font-weight: 900;
+            font-size: 18px;
+            transition: transform 80ms ease-in;
+        }
+        header .right .download:active{
+            transform: scale(.95);
+        }
+        
 .inicio
 {
     position: relative;
@@ -138,7 +189,7 @@ header
 }
 .trailer
 {
-    
+    width: 100%;
 }
 .about-text
 {
