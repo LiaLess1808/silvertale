@@ -93,11 +93,18 @@ header
                             --rotate-bar-one: 45deg;
                             --rotate-bar-three: -45deg;
                         }
-        header 
+        header .logo
+        {
+            transition: transform 80ms ease-in;
+        }
+            header .logo:active
+            {
+                transform: scale(.95);
+            }
         header .links
         {
             display:flex;
-            gap:20px;
+            justify-content:space-between;
             padding: 0 30px 0 10px;
             
         }
@@ -106,9 +113,10 @@ header
                 text-decoration: none;
                 color: #ffffff;
                 font-family: 'Inter';
-                font-size: 18px;
-                font-weight: 900;
+                font-size: 20px;
+                font-weight: 600;
                 transition: transform 80ms ease-in;
+                padding-right: 15px;
             }
             header .links a:active
             {
@@ -190,6 +198,22 @@ header
     justify-content: center;
     align-items: start;
     flex-direction: column;
+}
+.watch button
+{
+    background:#ffffff;
+    border:none;
+    border-radius: 12px;
+    color:#000000;
+    padding:10px;
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 18px;
+    transition: transform 80ms ease-in;
+}
+.watch button:active
+{
+    transform: scale(.95);
 }
 .trailer
 {
