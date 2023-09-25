@@ -118,10 +118,10 @@ header
                 transition: transform 80ms ease-in;
                 padding-right: 15px;
             }
-            header .links a:active
-            {
-                transform: scale(.95);
-            }
+                header .links a:active
+                {
+                    transform: scale(.95);
+                }
     header .right
     {
         display:flex;
@@ -134,34 +134,35 @@ header
             align-items: center;
             justify-content: center;
         }
-        .container-input {
-            position: relative;
-        }
-            
-            .input {
-                width: 150px;
-                padding: 10px 0px 10px 40px;
-                border-radius: 9999px;
-                border: solid 1px #333;
-                transition: all .2s ease-in-out;
-                outline: none;
-                opacity: 0.8;
-                background-color: #313131;
-                color:#ffffff;
+            .container-input {
+                position: relative;
             }
-            
-                .container-input svg {
-                    position: absolute;
-                    top: 50%;
-                    left: 10px;
-                    transform: translate(0, -50%);
-                    
+                
+                .input {
+                    width: 150px;
+                    padding: 10px 0px 10px 40px;
+                    border-radius: 9999px;
+                    border: solid 0px #333;
+                    transition: all .2s ease-in-out;
+                    outline: none;
+                    opacity: 0.8;
+                    background-color: #1b1b1b;
+                    color:#ffffff;
+                    font-family:'Inter';
                 }
                 
-                    .input:focus {
-                        opacity: 1;
-                        width: 250px;
+                    .container-input svg {
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        transform: translate(0, -50%);
+                        height: max-content;  
                     }
+                    
+                        .input:focus {
+                            opacity: 1;
+                            width: 250px;
+                        }
         header .right .download
         {
             background:#000000;
@@ -174,56 +175,59 @@ header
             font-size: 18px;
             transition: transform 80ms ease-in;
         }
-        header .right .download:active{
-            transform: scale(.95);
-        }
+            header .right .download:active{
+                transform: scale(.95);
+            }
         
 .inicio
 {
     position: relative;
     display: flex;
 }
- .guara-gif
-{
-    width:100%;
-    height: 100%;
-}
- .watch
-{
-    height:100%;
-    width:100%;
-    position:absolute;
-    bottom: 0;
-    display:flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-}
-.watch button
-{
-    background:#ffffff;
-    border:none;
-    border-radius: 12px;
-    color:#000000;
-    padding:10px;
-    font-family: 'Inter';
-    font-weight: 900;
-    font-size: 18px;
-    transition: transform 80ms ease-in;
-}
-.watch button:active
-{
-    transform: scale(.95);
-}
-.trailer
-{
-    width:100%;
-    height:100%;
-    z-index: 10;
-}
+    .guara-gif
+    {
+        width:100%;
+        height: 100%;
+    }
+    .watch
+    {
+        height:100%;
+        width:100%;
+        position:absolute;
+        bottom: 0;
+        display:flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+        .watch button
+        {
+            background:#ffffff;
+            border:none;
+            border-radius: 12px;
+            color:#000000;
+            padding:10px;
+            font-family: 'Inter';
+            font-weight: 900;
+            font-size: 25px;
+            transition: transform 80ms ease-in;
+            margin-bottom:100px;
+            margin-left:90px;
+        }
+            .watch button:active
+            {
+                transform: scale(.95);
+            }
+        .trailer
+        {
+            width:100%;
+            height:100%;
+            z-index: 10;
+        }
 .about-text
 {
-    height:7rem;
+    height:12.5rem;
+    background: linear-gradient(#000534 10%, #000000);
 }
 
 footer
