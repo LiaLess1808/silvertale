@@ -9,6 +9,7 @@
 {
     /* site colors */
     --p-color: #55afaf;
+    --p-color-dark:#244747;
     --s-color: #191919;
     --t-color: #313131;
 
@@ -252,7 +253,7 @@ header
         .about-text
         {
             height:12.5rem;
-            background: linear-gradient(#000534 10%, #000000);
+            background: linear-gradient(var(--p-color-dark) 10%, #000000);
             display: flex;
             flex-direction: column;
             justify-content: center;
