@@ -1,0 +1,15 @@
+AFAZERES:
+
+index;
+    php;
+    menu lateral;
+    lang;
+    socials;
+        pedir antonio para dar a senha das redes e 
+        criar as que não existirem;
+    footer;
+notícias;
+loja;
+comunidade;
+    em breve;
+
