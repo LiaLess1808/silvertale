@@ -276,10 +276,15 @@ header
                     color: #ffffff;
                     font-family: 'Monstserrat', sans-serif ;
                     font-weight: 600;
+                    font-size: 18px;
                     text-align: justify;
                     text-justify: distribute;
                     padding: 0 50px;
                     z-index:10;
+                }
+                .about-text p strong
+                {
+                    color:var(--p-color);
                 }
         .news
         {
@@ -423,8 +428,37 @@ footer
             color:#ffffff;
             font-family: 'Space Grotesk' ;
         }
+        .footer-content .logo-S
+        {
+            height:150px;
+            opacity: 20%;
+            transition: opacity 120ms ease-in-out;
+            margin: 20px 0 0 0;
+        }
+            .footer-content .logo-S:hover
+            {
+                opacity: 60%;
+            }
+        .footer-content .politics
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:80px;
+            margin: 20px 0 40px 0;
+        }
+            .footer-content .politics a
+            {
+                text-decoration: none;
+                font-size: 17px;
+                letter-spacing: 2px;
+                font-weight: 600;
+                font-family: 'Inter';
+                color: #ffffff;
+            }
         .footer-content .age img
         {
             height:100px;
+            opacity:90%
         }
     
