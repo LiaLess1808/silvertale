@@ -4,12 +4,16 @@ index;
     php;
     menu lateral;
     lang;
+        consertar o dropdown;
     socials;
         pedir antonio para dar a senha das redes e 
         criar as que não existirem;
     footer;
+
 notícias;
+
 loja;
+
 comunidade;
     em breve;
 
