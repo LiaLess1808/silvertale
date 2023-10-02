@@ -12,6 +12,7 @@
     --p-color-dark:#244747;
     --s-color: #191919;
     --t-color: #313131;
+    --bg-color:#000000;
 
     /**/
 
@@ -29,8 +30,10 @@ header
     height: 50px;
     width: auto;
     gap:4px;
-    background-color: #000000;
+    background: var(--bg-color);
     padding:20px 20px 20px 30px;
+    position:sticky;
+    z-index:100;
 }
     header .left
     {
@@ -38,6 +41,8 @@ header
         flex-direction: row;
         align-items: center;
         gap:40px;
+        
+        background-color: var(--bg-color);
     }
         header .menu
         {
@@ -48,7 +53,6 @@ header
             display:flex;
             justify-content: center;
             align-items: center;
-            z-index: 20;
         }
             .icon-menu {
                 --gap: 5px;
@@ -67,7 +71,6 @@ header
                 gap: var(--gap);
                 cursor: pointer;
                 position: relative;
-                z-index: 20;
             }
                 .bar 
                 {
@@ -76,24 +79,23 @@ header
                     width: 75%;
                     border-radius: .5rem;
                     background-color: #ffffff;
-                    z-index: 20;
+         
                 }
                     .bar--1 
                     {
                         top: var(--pos-y-bar-one);
-                        z-index: 20;
                         transform: rotate(var(--rotate-bar-one));
                         transition: top 200ms 100ms, transform 100ms;
                     }
                     .bar--2 
                     {
-                        z-index: 20;
+                   
                         transform: scaleX(var(--scale-bar));
                         transition: transform 150ms 100ms;
                     }
                     .bar--3 
                     {
-                        z-index: 20;
+                 
                         bottom: var(--pos-y-bar-three);
                         transform: rotate(var(--rotate-bar-three));
                         transition: bottom 200ms 100ms, transform 100ms;
@@ -101,12 +103,12 @@ header
                         .check-icon:checked + .icon-menu > .bar--1 
                         {
                             transition: top 200ms, transform 200ms 100ms;
-                            z-index: 20;
+                       
                         }
                         .check-icon:checked + .icon-menu > .bar--3 
                         {
                             transition: bottom 200ms, transform 200ms 100ms;
-                            z-index: 20;
+                        
                         }
                         .check-icon:checked + .icon-menu 
                         {
@@ -115,7 +117,7 @@ header
                             --scale-bar: 0;
                             --rotate-bar-one: 45deg;
                             --rotate-bar-three: -45deg;
-                            z-index: 20;
+                    
                         }
         header .logo
         {
@@ -152,6 +154,7 @@ header
         display:flex;
         flex-direction: row;
         gap:20px;
+        z-index:100;
     }
         header .right .search-bar
         {
@@ -219,7 +222,7 @@ header
             }
         header .right .download
         {
-            background:#000000;
+            background:var(--bg-color);
             border:var(--p-color) solid 2px;
             border-radius: 12px;
             color:#ffffff;
@@ -244,11 +247,19 @@ header
             {
                 cursor: pointer;
             }
-        
+.menu-aside
+{
+    position:absolute;
+    width:18vw;
+    height: 66.85rem;
+    background-color: var(--s-color);
+    z-index:11;
+}        
 .inicio
 {
     position: relative;
     display: flex;
+    z-index:2;
 }
     .guara-gif
     {
@@ -265,20 +276,22 @@ header
         justify-content: center;
         align-items: start;
         flex-direction: column;
+        z-index: 20;
     }
         .watch button
         {
             background:#ffffff;
             border:none;
             border-radius: 12px;
-            color:#000000;
+            color:var(--bg-color);
             padding:10px;
             font-family: 'Inter';
             font-weight: 900;
-            font-size: 30px;
+            font-size: 40px;
             transition: transform 80ms ease-in;
             margin: 0 0px -700px 140px;
             position:absolute;
+            z-index:2;
         }
             .watch button:active
             {
@@ -298,7 +311,7 @@ header
         .about-text
         {
             height:12.5rem;
-            background: linear-gradient(var(--p-color-dark) 10%, #000000);
+            background: linear-gradient(var(--p-color-dark) 10%, var(--bg-color));
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -409,7 +422,7 @@ header
             transition: all 0.3s ease 0s;
             cursor: pointer;
             outline: none;
-            z-index: +10;
+            z-index: 10;
         }
 
         .more:hover
@@ -423,14 +436,7 @@ header
         {
             transform: translateY(-1px); 
         }
-        .effect
-        {
-            height: 108.75rem;
-            width:100%;
-            background: #00000069;
-            position:absolute;
-            z-index: -1;
-        }
+
 footer
 {
     height:37rem;
