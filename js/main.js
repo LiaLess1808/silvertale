@@ -1,6 +1,5 @@
-//funçao para definir se o menu está ativo
 
-var check = $('.check-icon');
+var menu = document.getElementsById("menuAside");
 
 function abreMenuAside()
 {
