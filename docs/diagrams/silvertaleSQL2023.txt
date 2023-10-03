@@ -1,0 +1,51 @@
+Create Schema silvertale2023;
+Use silvertale2023;
+
+Create Table User
+(
+
+);
+Create Table Produto
+(
+
+);
+Create Table NotaDeCompra
+(
+
+);
+
+Insert into User values 
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+();
+
+Insert into Produto values 
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+();
+
+Insert into NotaDeCompra values 
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+(),
+();
