@@ -251,14 +251,19 @@ header
             }
 .menu-aside
 {
-    position:absolute;
-    width:18vw;
-    height: 200vh;
+    display: flex;
+    justify-content: center;
+    width:13vw;
+    height: 52.2rem;
     background-color: var(--s-color);
     z-index:11;
-    transform: translateX(-50px);
-    position:fixed;
-}       
+    position:absolute;
+    padding-top:2rem;
+}
+.menu-aside
+{
+
+}
 /*=================================================================================================================
 ==================================================== MAIN INDEX ===================================================
 ===================================================================================================================*/
