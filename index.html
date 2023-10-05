@@ -1,249 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, 
+                            initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, 
-                        initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
 
-    <link rel="stylesheet" href="styles/style.css">
+        <link rel="icon" href="assets/logos/silvertale-logo-icon-transformed.png">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <link rel="icon" href="assets/logos/silvertale-logo-icon-transformed.png">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <title>Silvertale</title>
+    </head>
 
-    <title>Silvertale</title>
-</head>
+    <body>
+        <header>
+            <div class="left">
+                <div class="menu">
+                    <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox" onclick="validate()">
+                    <label class="icon-menu" for="check-icon">
+                        <div class="bar bar--1"></div>
+                        <div class="bar bar--2"></div>
+                        <div class="bar bar--3"></div>
+                    </label>
+                </div>
 
-<body>
-    <header>
-        <div class="left">
-            <div class="menu">
-                <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox" onclick="validate()">
-                <label class="icon-menu" for="check-icon">
-                    <div class="bar bar--1"></div>
-                    <div class="bar bar--2"></div>
-                    <div class="bar bar--3"></div>
-                </label>
-            </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logos/silvertale-logo-icon.png" height="60px" alt="Logo da Silvertale">
+                    </a>
+                </div>
 
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/logos/silvertale-logo-icon.png" height="60px" alt="Logo da Silvertale">
-                </a>
-            </div>
+                <div class="links">
+                    <a href="page/noticias/index.html" class="noticias">
+                        <i class='bx bx-news' style='color:#ffffff'></i> NOTÍCIAS
+                    </a>
 
-            <div class="links">
-                <a href="" class="noticias">
-                    <i class='bx bx-news' style='color:#ffffff'></i> NOTÍCIAS
-                </a>
+                    <a href="page/loja/index.html" class="loja">
+                        <i class='bx bx-shopping-bag' style='color:#ffffff'></i> LOJA
+                    </a>
 
-                <a href="" class="loja">
-                    <i class='bx bx-shopping-bag' style='color:#ffffff'></i> LOJA
-                </a>
-
-                <a href="" class="comunidade">
-                    <i class='bx bxs-group' style='color:#ffffff' ></i> COMUNIDADE
-                </a>
-            </div>
-        </div>
-
-        <div class="right">
-            <div class="search-bar">
-                <div class="container-input" id="search-bar">
-                    <input type="text" placeholder="Pesquisar" name="text" class="input">
-                    <svg fill="#ffffff" width="22px" height="22px" viewBox="0 0 1920 1920"
-                        xmlns="http://www.w3.org/2000/svg">
-
-                        <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 
-                          677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 
-                          677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 
-                          193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 
-                          790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 
-                          79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
-
-                    </svg>
+                    <a href="page/comunidade/index.html" class="comunidade">
+                        <i class='bx bxs-group' style='color:#ffffff' ></i> COMUNIDADE
+                    </a>
                 </div>
             </div>
 
-            <div class="lang">
-                <i class='bx bx-world' style='color:#ffffff'></i>
-                
-                <div class="idiomas">
-                    <ul>
-                        <li class="idioma pt-br">
-                            <img src="" alt="Bandeira do Brasil"> PT-BR
-                        </li>
-                        <li class="idioma en">
-                            <img src="" alt="Bandeira dos Estados Unidos"> EN
-                        </li>
-                        <li class="idioma es">
-                            <img src="" alt="Bandeira da Espanha"> ES
-                        </li>
-                    </ul>
-                </div>
-                
-            </div>
-            
-            <button class="download">
-                DOWNLOAD
-                <i class='bx bx-download' style='color:#ffffff'></i>
-            </button>
-        </div>
-    </header>
+            <div class="right">
+                <div class="search-bar">
+                    <div class="container-input" id="search-bar">
+                        <input type="text" placeholder="Pesquisar" name="text" class="input">
+                        <svg fill="#ffffff" width="22px" height="22px" viewBox="0 0 1920 1920"
+                            xmlns="http://www.w3.org/2000/svg">
 
-    <nav class="menu-aside" id="menuAside">
-        <div class="navbar">
-            
-            <div class="menu-items">
-                <li>
-                    <a href="index.html">INÍCIO</a>
-                </li>
-                <li>
-                    <a href="jogos.html">JOGOS</a>
+                            <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 
+                            677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 
+                            677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 
+                            193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 
+                            790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 
+                            79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="lang">
+                    <i class='bx bx-world' style='color:#ffffff'></i>
                     
+                    <div class="idiomas">
+                        <ul>
+                            <li class="idioma pt-br">
+                                <img src="" alt="Bandeira do Brasil"> PT-BR
+                            </li>
+                            <li class="idioma en">
+                                <img src="" alt="Bandeira dos Estados Unidos"> EN
+                            </li>
+                            <li class="idioma es">
+                                <img src="" alt="Bandeira da Espanha"> ES
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+                <button class="download">
+                    DOWNLOAD
+                    <i class='bx bx-download' style='color:#ffffff'></i>
+                </button>
+            </div>
+        </header>
+
+        <nav class="menu-aside" id="menuAside">
+            <div class="navbar">
+                
+                <div class="menu-items">
                     <li>
-                        Echoes of Rain
+                        <a href="index.html">INÍCIO</a>
                     </li>
-                    
-                </li>
-                <li>
-                    <a href="">ENTRETENIMENTO</a>
-                    <ul>
+                    <li>
+                        <a href="page/games/index.html">JOGOS</a>
+                        
                         <li>
-                            Cinematics
+                            <a href="page/games/Echoes-of-Rain.html">Echoes of Rain</a>
                         </li>
+                        
+                    </li>
+                    <li>
+                        <a href="page/entretenimento/index.html">ENTRETENIMENTO</a>
+                        
                         <li>
-                            Original Soundtrack
+                            <a href="page/entretenimento/cinematics.html">Cinematics</a>
                         </li>
-                    </ul>
-                    
-                </li>
-                <li>
-                    <a href="noticias.html">NOTÍCIAS</a>
-                </li>
-                <li>
-                    <a href="loja.html">LOJA</a>
-                </li>
-                <li>
-                    <a href="suporte.html">SUPORTE</a>
-                </li>
-                <li>
-                    <a href="comunidade.html">COMUNIDADE</a>
-                </li>
+
+                        <li>
+                           <a href="page/entretenimento/original-soundtracks.html">OST</a>
+                        </li>
+                    </li>
+                    <li>
+                        <a href="page/noticias/index.html">NOTÍCIAS</a>
+                    </li>
+                    <li>
+                        <a href="page/loja/index.html">LOJA</a>
+                    </li>
+                    <li>
+                        <a href="page/suporte/index.html">SUPORTE</a>
+                    </li>
+                    <li>
+                        <a href="page/comunidade/index.html">COMUNIDADE</a>
+                    </li>
+                </div>
+            
             </div>
-           
-        </div>
-    </nav>
+        </nav>
 
-    <main>
-        <div class="inicio">
-            <img class="guara-gif" src="assets/marketing-images/guara.png" alt="Fundo da Página inicial">
+        <main>
+            <div class="inicio">
+                <img class="guara-gif" src="assets/marketing-images/guara.png" alt="Fundo da Página inicial">
 
-            <div class="watch">
-                <video src="" class="trailer"></video>
-                <button>ASSISTIR AO TRAILER <i class='bx bx-play-circle'></i> </button>
-            </div>
-        </div>
-
-        <div class="about">
-            <div class="text-effect"></div>
-            <div class="effect"></div>
-
-            <div class="about-text">
-                <h2> ECHOES OF RAIN </h2>
-                <p>
-                    Em um mundo pós-apocalíptico, você acorda de uma hibernação sem memória do passado. O ambiente é
-                    hostil, as cidades estão em ruínas, e a sobrevivência é a única prioridade. Você procura abrigo,
-                    comida e água, caça e colhe recursos selvagens, e enfrenta outros sobreviventes, alguns amigáveis,
-                    outros hostis. A descoberta de fragmentos do seu passado revela que você era um agente treinado.
-                    Cada dia é uma batalha pela sobrevivência, mas também uma busca por identidade e a verdade. 
-                    Sua jornada é uma luta constante para adaptar-se, resistir e, talvez sobreviver em um mundo 
-                    quebrado chamado <strong> Echoes of Rain </strong>.
-                </p>
-            </div>
-
-            <div class="news">
-                <h2>NOVIDADES</h2>
-                <a href="">
-                    <button class="more" id="more-news">MAIS</button>
-                </a>
-            </div>
-
-            <div class="about-world">
-                <h2>DO MUNDO</h2>
-                <a href="">
-                    <button class="more" id="more-world">MAIS</button>
-                </a>
-            </div>
-
-            <div class="about-game">
-                <h2>DO JOGO</h2>
-                <a href="">
-                    <button class="more" id="more-game">MAIS</button>
-                </a>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-divider">
-            <h3> JUNTE-SE À COMUNIDADE: </h3>
-            <ul class="socials">
-
-                <a href="https://www.youtube.com/@thelast8416" target=”_blank”>
-                    <i class='bx bxl-youtube' style='color:#ffffff'></i>
-                </a>
-
-                <a href="" target=”_blank”>
-                    <i class='bx bxl-instagram' style='color:#ffffff'></i>
-                </a>
-
-                <a href="" target=”_blank”>
-                    <i class='bx bxl-discord-alt' style='color:#ffffff'></i>
-                </a>
-
-                <a href="" target=”_blank”>
-                    <i class='bx bxl-twitter' style='color:#ffffff'></i>
-                </a>
-
-                <a href="" target=”_blank”>
-                    <i class='bx bxl-facebook-circle' style='color:#ffffff'></i>
-                </a>
-            </ul>
-        </div>
-
-        <div class="footer-content">
-            <section class="rights">
-                <p>
-                    © 2023 Silvertale Ent. Silvertale, <strong> Echoes of Rain </strong>
-                    e qualquer logotipo associado são marcas comerciais,
-                    marcas de serviço e/ou marcas registradas da Silvertale Ent.
-                </p>
-            </section>
-
-            <div class="logos">
-                <div class="silvertale-logo">
-                    <img class = "logo-E"src="" alt="">
-                    <img class = "logo-S"src="assets/logos/silvertale-logo-icon-transformed.png" alt="Silvertale Logo">
+                <div class="watch">
+                    <video src="" class="trailer"></video>
+                    <button>ASSISTIR AO TRAILER <i class='bx bx-play-circle'></i> </button>
                 </div>
             </div>
 
-            <div class="politics">
-                <div class="privacidade">
-                    <a href="">POLÌTICA DE PRIVACIDADE</a>
-                </div>
-                <div class="termos">
-                    <a href="">TERMOS DE SERVIÇO</a>
-                </div>
-            </div>
-            <div class="age">
-                <img src="assets/marketing-images/age-class.png"
-                    alt="Classificação Indicativa Não Recomendado para Menores de 16 anos.">
-            </div>
-        </div>
-    </footer>
-    <script src = "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src = "js/main.js"></script>
-</body>
+            <div class="about">
+                <div class="text-effect"></div>
+                <div class="effect"></div>
 
+                <div class="about-text">
+                    <h2> ECHOES OF RAIN </h2>
+                    <p>
+                        Em um mundo pós-apocalíptico, você acorda de uma hibernação sem memória do passado. O ambiente é
+                        hostil, as cidades estão em ruínas, e a sobrevivência é a única prioridade. Você procura abrigo,
+                        comida e água, caça e colhe recursos selvagens, e enfrenta outros sobreviventes, alguns amigáveis,
+                        outros hostis. A descoberta de fragmentos do seu passado revela que você era um agente treinado.
+                        Cada dia é uma batalha pela sobrevivência, mas também uma busca por identidade e a verdade. 
+                        Sua jornada é uma luta constante para adaptar-se, resistir e, talvez sobreviver em um mundo 
+                        quebrado chamado <strong> Echoes of Rain </strong>.
+                    </p>
+                </div>
+
+                <div class="news">
+                    <h2>NOVIDADES</h2>
+                    <a href="page/noticias/index.html">
+                        <button class="more" id="more-news">MAIS</button>
+                    </a>
+                </div>
+
+                <div class="about-world">
+                    <h2>DO MUNDO</h2>
+                    <a href="page/games/EOR/mundo.html">
+                        <button class="more" id="more-world">MAIS</button>
+                    </a>
+                </div>
+
+                <div class="about-game">
+                    <h2>DO JOGO</h2>
+                    <a href="page/games/EOR/jogo.html">
+                        <button class="more" id="more-game">MAIS</button>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-divider">
+                <h3> JUNTE-SE À COMUNIDADE: </h3>
+                <ul class="socials">
+
+                    <a href="https://www.youtube.com/@thelast8416" target=”_blank”>
+                        <i class='bx bxl-youtube' style='color:#ffffff'></i>
+                    </a>
+
+                    <a href="" target=”_blank”>
+                        <i class='bx bxl-instagram' style='color:#ffffff'></i>
+                    </a>
+
+                    <a href="" target=”_blank”>
+                        <i class='bx bxl-discord-alt' style='color:#ffffff'></i>
+                    </a>
+
+                    <a href="" target=”_blank”>
+                        <i class='bx bxl-twitter' style='color:#ffffff'></i>
+                    </a>
+
+                    <a href="" target=”_blank”>
+                        <i class='bx bxl-facebook-circle' style='color:#ffffff'></i>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="footer-content">
+                <section class="rights">
+                    <p>
+                        © 2023 Silvertale Ent. Silvertale, <strong> Echoes of Rain </strong>
+                        e qualquer logotipo associado são marcas comerciais,
+                        marcas de serviço e/ou marcas registradas da Silvertale Ent.
+                    </p>
+                </section>
+
+                <div class="logos">
+                    <div class="silvertale-logo">
+                        <img class = "logo-E"src="" alt="">
+                        <img class = "logo-S"src="assets/logos/silvertale-logo-icon-transformed.png" alt="Silvertale Logo">
+                    </div>
+                </div>
+
+                <div class="politics">
+                    <div class="privacidade">
+                        <a href="">POLÌTICA DE PRIVACIDADE</a>
+                    </div>
+                    <div class="termos">
+                        <a href="">TERMOS DE SERVIÇO</a>
+                    </div>
+                </div>
+                <div class="age">
+                    <img src="assets/marketing-images/age-class.png"
+                        alt="Classificação Indicativa Não Recomendado para Menores de 16 anos.">
+                </div>
+            </div>
+        </footer>
+        <script src = "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <script src = "js/main.js"></script>
+    </body>
 </html>
