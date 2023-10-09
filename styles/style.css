@@ -197,6 +197,7 @@ header
         header .right .lang
         {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             padding:7px;
@@ -226,10 +227,29 @@ header
             {
                 height:20px;
             }
-            header .right .lang .idiomas .idioma
-            {
-
-            }
+                header .right .lang .idiomas
+                {
+                    display: flex;
+                    flex-direction: column;
+                }
+                    header .right .lang .idiomas ul
+                    {
+                        list-style: none;
+                    }
+                    header .right .lang .idiomas .idioma img
+                    {
+                        height:15px;
+                        width:24px;
+                    }
+                    header .right .lang h3
+                    {
+                        color: #ffffff;
+                    }
+                    header .right .lang p
+                    {
+                        color:#ffffff;
+                    }
+                
         header .right .download
         {
             background:var(--bg-color);
