@@ -222,6 +222,14 @@ header
             header .right .lang:active{
                 transform: scale(.95);
             }
+            header .right .lang .idiomas
+            {
+                height:20px;
+            }
+            header .right .lang .idiomas .idioma
+            {
+
+            }
         header .right .download
         {
             background:var(--bg-color);
@@ -283,6 +291,7 @@ header
         {
             display: flex;
             flex-direction: column;
+            transform:translateX(25px);
         }
             .min
             {
