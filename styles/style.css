@@ -260,10 +260,37 @@ header
     position:absolute;
     padding-top:2rem;
 }
-.menu-aside li
-{
+    .menu-aside ul
+    {
+        list-style: none;
+    }
+        .menu-aside ul li
+        {
+            padding: 10px 0 0 0;
+        }
+            .menu-aside ul li a
+            {
+                text-decoration: none;
+                color: #ffffff;
+            }
+            .menu-aside ul li .maj
+            {
+                font-family: 'Inter';
+                font-size: 16px;
+                font-weight: 800;
+            }
+        .menu-aside ul ul
+        {
+            display: flex;
+            flex-direction: column;
+        }
+            .min
+            {
+                font-family: 'Fira Sans';
+                font-size: 15px;
+                font-weight: 500;
+            }
 
-}
 /*=================================================================================================================
 ==================================================== MAIN INDEX ===================================================
 ===================================================================================================================*/
