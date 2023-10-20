@@ -18,8 +18,8 @@
 
     --bg-color:#000000;
 
-    /**/
-
+    /*search bar position*/
+    --o-posit-x:-100px;
     /**/
 
     /**/
@@ -50,7 +50,181 @@ header
         
         background-color: var(--bg-color);
     }
-        header .menu
+        header .logo
+        {
+            transition: transform 80ms ease-in;
+        }
+            header .logo:active
+            {
+                transform: scale(.95);
+            }
+        header .links
+        {
+            display:flex;
+            justify-content:space-between;
+            padding: 0 30px 0 10px;
+            gap:40px;
+            
+        }
+            header .links a
+            {
+                text-decoration: none;
+                color: #ffffff;
+                font-family: 'Inter';
+                font-size: 20px;
+                font-weight: 900;
+                transition: transform 80ms ease-in;
+                padding-right: 15px;
+            }
+                header .links a:active
+                {
+                    transform: scale(.95);
+                }
+    header .right
+    {
+        display:flex;
+        flex-direction: row;
+        gap:20px;
+        z-index:100;
+    }
+/*=================================================================================================================
+====================================================== SEARCH =====================================================
+===================================================================================================================*/
+        header .right .search-bar
+        {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+            .container-input 
+            {
+                position: relative;
+            }
+                .input 
+                {
+                    width: 250px;
+                    padding: 15px 0px 15px 40px;
+                    border-radius: 9999px;
+                    border: solid 0px #333;
+                    transition: all .2s ease-in-out;
+                    outline: none;
+                    opacity: 0.8;
+                    background-color: #1b1b1b;
+                    color:#ffffff;
+                    font-family:'Inter';
+                    font-size: 18px;
+                    transform: translateX(var(--o-posit-x));
+                }
+                    .container-input svg 
+                    {
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        transform: translate(0, -50%);
+                        height: max-content;  
+                        transform: translateX(var(--o-posit-x)) translateY(-10px);
+                    }
+                        .input:focus 
+                        {
+                            opacity: 1;
+                            width: 350px;
+                        }
+/*=================================================================================================================
+===================================================== LANG ========================================================
+===================================================================================================================*/
+                        
+        header .right .lang
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding:7px;
+            transition: transform 120ms ease-in;
+            transition: border 120ms ease-in;
+            border: none;
+            background-color: none;
+            border-radius:50%;
+            height: 33px;
+            width: 33px;
+        }
+            header .right .lang i
+            {
+                font-size: 24px;
+            }
+            header .right .lang:hover
+            {
+                border: #ffffff solid 2px;
+                background-color: #c2c2c221;
+                cursor: pointer;
+            }
+            header .right .lang:active{
+                transform: scale(.95);
+            }
+            header .right .lang .idiomas
+            {
+                height:20px;
+            }
+                header .right .lang .idiomas
+                {
+                    display: flex;
+                    flex-direction: column;
+                }
+                    header .right .lang .idiomas ul
+                    {
+                        list-style: none;
+                    }
+                        header .right .lang .idiomas ul li
+                        {
+                            display: flex;
+                            flex-direction: row;
+                            gap:10px;
+                        }
+                    header .right .lang .idiomas .idioma img
+                    {
+                        height:15px;
+                        width:24px;
+                    }
+                    header .right .lang h3
+                    {
+                        color: #ffffff;
+                    }
+                    header .right .lang p
+                    {
+                        color:#ffffff;
+                    }
+                
+        header .right .download
+        {
+            background:var(--bg-color);
+            border:var(--p-color) solid 2px;
+            border-radius: 12px;
+            color:#ffffff;
+            padding:10px;
+            font-family: 'Inter';
+            font-weight: 900;
+            font-size: 18px;
+            transition: transform 80ms ease-in;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap:10px;
+        }
+            header .right .download i
+            {
+                font-size: 24px;
+            }
+            header .right .download:active{
+                transform: scale(.95);
+            }
+            header .right .download:hover
+            {
+                cursor: pointer;
+            }
+/*=================================================================================================================
+===================================================== MENU ========================================================
+===================================================================================================================*/
+.menu
         {
             height:45px;
             width: 45px;
@@ -123,206 +297,7 @@ header
                             --scale-bar: 0;
                             --rotate-bar-one: 45deg;
                             --rotate-bar-three: -45deg;
-                    
                         }
-        header .logo
-        {
-            transition: transform 80ms ease-in;
-        }
-            header .logo:active
-            {
-                transform: scale(.95);
-            }
-        header .links
-        {
-            display:flex;
-            justify-content:space-between;
-            padding: 0 30px 0 10px;
-            gap:40px;
-            
-        }
-            header .links a
-            {
-                text-decoration: none;
-                color: #ffffff;
-                font-family: 'Inter';
-                font-size: 20px;
-                font-weight: 900;
-                transition: transform 80ms ease-in;
-                padding-right: 15px;
-            }
-                header .links a:active
-                {
-                    transform: scale(.95);
-                }
-    header .right
-    {
-        display:flex;
-        flex-direction: row;
-        gap:20px;
-        z-index:100;
-    }
-        header .right .search-bar
-        {
-            display:flex;
-            align-items: center;
-            justify-content: center;
-        }
-            .container-input {
-                position: relative;
-            }
-                
-                .input {
-                    width: 250px;
-                    padding: 15px 0px 15px 40px;
-                    border-radius: 9999px;
-                    border: solid 0px #333;
-                    transition: all .2s ease-in-out;
-                    outline: none;
-                    opacity: 0.8;
-                    background-color: #1b1b1b;
-                    color:#ffffff;
-                    font-family:'Inter';
-                    font-size: 18px;
-                }
-                
-                    .container-input svg {
-                        position: absolute;
-                        top: 50%;
-                        left: 10px;
-                        transform: translate(0, -50%);
-                        height: max-content;  
-                    }
-                    
-                        .input:focus {
-                            opacity: 1;
-                            width: 350px;
-                        }
-        header .right .lang
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding:7px;
-            transition: transform 120ms ease-in;
-            transition: border 120ms ease-in;
-            border: none;
-            background-color: none;
-            border-radius:50%;
-            height: 33px;
-            width: 33px;
-
-        }
-            header .right .lang i
-            {
-                font-size: 24px;
-            }
-            header .right .lang:hover
-            {
-                border: #ffffff solid 2px;
-                background-color: #c2c2c221;
-                cursor: pointer;
-            }
-            header .right .lang:active{
-                transform: scale(.95);
-            }
-            header .right .lang .idiomas
-            {
-                height:20px;
-            }
-                header .right .lang .idiomas
-                {
-                    display: flex;
-                    flex-direction: column;
-                }
-                    header .right .lang .idiomas ul
-                    {
-                        list-style: none;
-                    }
-                    header .right .lang .idiomas .idioma img
-                    {
-                        height:15px;
-                        width:24px;
-                    }
-                    header .right .lang h3
-                    {
-                        color: #ffffff;
-                    }
-                    header .right .lang p
-                    {
-                        color:#ffffff;
-                    }
-                
-        header .right .download
-        {
-            background:var(--bg-color);
-            border:var(--p-color) solid 2px;
-            border-radius: 12px;
-            color:#ffffff;
-            padding:10px;
-            font-family: 'Inter';
-            font-weight: 900;
-            font-size: 18px;
-            transition: transform 80ms ease-in;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap:10px;
-        }
-            header .right .download i
-            {
-                font-size: 24px;
-            }
-            header .right .download:active{
-                transform: scale(.95);
-            }
-            header .right .download:hover
-            {
-                cursor: pointer;
-            }
-.menu-aside
-{
-    display: flex;
-    justify-content: center;
-    width:13vw;
-    height: 52.2rem;
-    background-color: var(--s-color);
-    z-index:11;
-    position:absolute;
-    padding-top:2rem;
-}
-    .menu-aside ul
-    {
-        list-style: none;
-    }
-        .menu-aside ul li
-        {
-            padding: 10px 0 0 0;
-        }
-            .menu-aside ul li a
-            {
-                text-decoration: none;
-                color: #ffffff;
-            }
-            .menu-aside ul li .maj
-            {
-                font-family: 'Inter';
-                font-size: 16px;
-                font-weight: 800;
-            }
-        .menu-aside ul ul
-        {
-            display: flex;
-            flex-direction: column;
-            transform:translateX(25px);
-        }
-            .min
-            {
-                font-family: 'Fira Sans';
-                font-size: 15px;
-                font-weight: 500;
-            }
 /*=================================================================================================================
 ==================================================== SIDEBAR ======================================================
 ===================================================================================================================*/
@@ -340,6 +315,7 @@ header
     position:absolute;
     font-family: 'Inter';
     font-weight: 6 00;
+    left:-280px;
 }
     .sidebar .nav-links
     {
