@@ -2,14 +2,14 @@ AFAZERES:
 
 rep link: https://github.com/LiaLess1808/silvertale.git
 
-index; (23%)
+index; (30%)
     php;(0%)
-    menu lateral; (75%)
+    menu lateral; (99%)
     lang;(50%)
         consertar o dropdown;(0%)
-    socials;(0%)
+    socials;(50%)
         pedir antonio para dar a senha das redes e 
-        criar as que não existirem;(0%)
+        criar as que não existirem;(50%)
     footer;
 
 notícias;(0%)
