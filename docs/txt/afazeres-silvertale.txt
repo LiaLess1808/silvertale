@@ -2,6 +2,16 @@ AFAZERES:
 
 rep link: https://github.com/LiaLess1808/silvertale.git
 
+Ideia: Atualmente o site consta com 3 opções de saiba mais: Novidades, Do mundo e Do jogo. Talvez mudar para: Os inimigos, O mundo, Os personagens e adicionar um quarta chamado As ferramentas e armas seria uma boa. E aí as novidades ficariam possivelmente em outro espaço se possível
+
+páginas de informação:
+    Personagens: Usa um sistema de card pra cada personagem onde ao clicar ele se expande horizontalmente para dar uma descrição maior do personagem;
+    Mundo: Serve para mostrar os locais do mundo, é uma card retangular que ocupa quase toda a tela, após clicar nele, ele reduz a imagem a quase nada para mostrar mais informação textual do local;
+    Inimigos: Mesmo esquema dos personagens;
+    Ferramentas e Armas: Podem também seguir o mesmo esquema dos personagens, mas tem espaço para mais ideias no futuro;
+
+    OBS: Fazer isso é muito interessante no site pq no futuro podemos implementar isso dentro do jogo como um diario do player onde ele anota coisas sobre tudo que ele encontra no caminho, como um códice. 
+
 index; (30%)
     php;(0%)
     menu lateral; (99%)
