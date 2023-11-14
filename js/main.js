@@ -25,6 +25,7 @@
 //================================================================================
 //==================================== SIDEBAR ===================================
 //================================================================================
+
     let arrow = document.querySelectorAll(".arrow");
 
     for (var i = 0; i < arrow.length; i++) 
@@ -80,5 +81,34 @@
             {
                 $('.sidebar').removeClass('close');
             }
+        }
+    });
+
+//================================================================================
+//================================ LOCK SCROLL ===================================
+//================================================================================
+
+    document.addEventListener("DOMContentLoaded", function () 
+    {
+        var dSCheckbox = document.getElementById("check-icon");
+
+        dSCheckbox.addEventListener("change", function () 
+        {
+        
+            // Adiciona ou remove o ouvinte de eventos de rolagem dependendo do estado da checkbox
+            
+            if (dSCheckbox.checked) 
+            {
+                window.addEventListener("wheel", blockScroll, { passive: false });
+            } 
+            else 
+            {
+                window.removeEventListener("wheel", blockScroll);
+            }
+        });
+
+        function blockScroll(event) 
+        {
+            event.preventDefault();
         }
     });

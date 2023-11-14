@@ -1,11 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desativar Scroll</title>
+  <style>
+    body {
+      height: 200%;
+    }
+    .a{
+        width:100%;
+        height:100px;
+    }
+    .b
+    {
+        background-color: red;
+    }
+    .c
+    {
+        background-color: orange;
+    }
+    .d
+    {
+        background-color: yellow;
+    }
+    .e
+    {
+        background-color: green;
+    }
+    .f
+    {
+        background-color: blue;
+    }
+
+    .sidebar
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    min-height: 100vh;
+    width: 280px;
+    background: var(--bg-color);
+    background-size: cover;
+    z-index: 100;
+    transition: all 0.5s ease;
+    position:absolute;
+    font-family: 'Inter';
+    font-weight: 6 00;
+    left:-280px;
+}
+    .sidebar .nav-links
+    {
+        height: 100%;
+        padding: 30px 0 100px 0;
+        overflow: auto;
+        
+    }
+        .sidebar .nav-links::-webkit-scrollbar
+        {
+            display: none;
+        }
+        .sidebar .nav-links li
+        {
+            position: relative;
+            list-style: none;
+            transition: all 0.4s ease;
+        }
+            .sidebar .nav-links li:hover
+            {
+                background: var(--p-color-mid);
+            }
+            .sidebar .nav-links li .icon-link
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .sidebar .nav-links li i
+            {
+                height: 50px;
+                min-width: 78px;
+                text-align: center;
+                line-height: 50px;
+                color: #fff;
+                font-size: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+                .sidebar .nav-links .showMenu .arrow
+                {
+                    transform: rotate(-180deg);
+                }
+            .sidebar .nav-links li a
+            {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+                .sidebar .nav-links li a .link_name
+                {
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #fff;
+                    transition: all 0.4s ease;
+                }
+            
+            .sidebar .nav-links li .sub-menu
+            {
+                padding: 6px 6px 14px 80px;
+                margin-top: 0px;
+                background: var(--p-color-dark);
+                display: none;
+            }
+                .sidebar .nav-links li .sub-menu li
+                {
+                    padding: 15px 6px 5px 80px;
+                    margin-top: -10px;
+                    background: var(--p-color-dark);
+                    display: flex;
+                    transform: translateX(-85px) translateY(4px);
+                }
+                .sidebar .nav-links li.showMenu .sub-menu
+                {
+                    display: block;
+                }
+                    .sidebar .nav-links li .sub-menu a
+                    {
+                        color: #fff;
+                        font-size: 15px;
+                        padding: 5px 0;
+                        white-space: nowrap;
+                        opacity: 0.6;
+                        transition: all 0.3s ease;
+                    }
+                        .sidebar .nav-links li .sub-menu a:hover
+                        {
+                            opacity: 1;
+                        }
+                            .sidebar .nav-links li .sub-menu li a i
+                            {
+                                
+                                transform:translateX(-22px) scale(0.65);
+                            }
+                    .sidebar .nav-links li .sub-menu.blank
+                    {
+                        opacity: 1;
+                        pointer-events: auto;
+                        padding: 3px 20px 6px 16px;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                        .sidebar .nav-links li:hover .sub-menu.blank
+                        {
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+.sidebar.close
+{
+    width: 78px;
+}
+    .sidebar.close .nav-links
+    {
+        overflow: visible;
+    }
+
+        .sidebar.close .nav-links li .icon-link
+        {
+            display: block
+        }
+
+            .sidebar.close .nav-links i.arrow
+            {
+                display: none;
+            }
+
+        .sidebar.close .nav-links li a .link_name
+        {
+            opacity: 0;
+            pointer-events: none;
+        }
+            
+        .sidebar.close .nav-links li .sub-menu
+        {
+            position: absolute;
+            left: 100%;
+            top: -10px;
+            margin-top: 0;
+            padding: 10px 20px;
+            border-radius: 0 6px 6px 0;
+            opacity: 0;
+            display: block;
+            pointer-events: none;
+            transition: 0s;
+        }
+            .sidebar.close .nav-links li:hover .sub-menu
+            {
+                top: 0;
+                opacity: 1;
+                pointer-events: auto;
+                transition: all 0.4s ease;
+            }
+            .sidebar.close .nav-links li .sub-menu .link_name
+            {
+                font-size: 18px;
+                opacity: 1;
+                display: block;
+            }
+
+
+@media (max-width: 400px) 
+{
+    .sidebar.close.small-screen
+    {
+        width: 0;
+    }
+
+        .sidebar.close.small-screen ~ .home-section
+        {
+            width: 100%;
+            left: 0;
+            z-index: 100;
+        }
+}
+  </style>
 </head>
 <body>
+
+  <label for="desativarScrollCheckbox" class="icon-menu">Desativar Scroll</label>
+  <input class="check-icon" name="check-icon" type="checkbox" id="desativarScrollCheckbox">
+
+  <div class="sidebar" id="sidebar">
+    <ul class="nav-links">
+        <li>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bxs-group' style='color:#ffffff'></i>
+                    <span class="link_name">COMUNIDADE</span>
+                </a>
+                <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a href="#">EM BREVE</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bxs-movie-play'></i>
+                    <span class="link_name">MÍDIA</span>
+                </a>
+                <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a href="#">Cinematics</a></li>
+                <li><a href="#">OST</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bx-joystick'></i>
+                    <span class="link_name">JOGOS</span>
+                </a>
+                <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a href="#">Echoes Of Rain</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bx-shopping-bag' style='color:#ffffff'></i>
+                    <span class="link_name">LOJA</span>
+                </a>
+                <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a href="#">EM BREVE</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bx-news' style='color:#ffffff'></i>
+                    <span class="link_name">NOTÍCIAS</span>
+                </a>
+                <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Destaques</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="icon-link">
+                <a href="#">
+                    <i class='bx bx-support' style='color:#ffffff' ></i>
+                    <span class="link_name">SUPORTE</span>
+                </a>
+                <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+                <li>
+                    <a href="#">Requisitos</a>
+                </li>
+                <li>
+                    <a href="#">
+                        SUPORTE 
+                        <i  class='bx bx-link-external' 
+                            style='color:#ffffff'>
+                        </i>
+                    </a>
+                </li>
+                <li><a href="#">Códigos da comunidade</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+  <div class="a b"></div>
+  <div class="a c"></div>
+  <div class="a d"></div>
+  <div class="a e"></div>
+  <div class="a f"></div>
+  <div class="a b"></div>
+  <div class="a c"></div>
+  <div class="a d"></div>
+  <div class="a e"></div>
+  <div class="a f"></div>
+  <div class="a b"></div>
+  <div class="a c"></div>
+  <div class="a d"></div>
+  <div class="a e"></div>
+  <div class="a f"></div>
+  <div class="a b"></div>
+  <div class="a c"></div>
+  <div class="a d"></div>
+  <div class="a e"></div>
+  <div class="a f"></div>
+  <div class="a b"></div>
+  <div class="a c"></div>
+  <div class="a d"></div>
+  <div class="a e"></div>
+  <div class="a f"></div>
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var desativarScrollCheckbox = document.getElementById("desativarScrollCheckbox");
+
+      desativarScrollCheckbox.addEventListener("change", function () {
+        // Adiciona ou remove o ouvinte de eventos de rolagem dependendo do estado da checkbox
+        if (desativarScrollCheckbox.checked) {
+          window.addEventListener("wheel", bloquearScroll, { passive: false });
+        } else {
+          window.removeEventListener("wheel", bloquearScroll);
+        }
+      });
+
+      function bloquearScroll(event) {
+        event.preventDefault();
+      }
+    });
+
+
+
+    var checkbox = document.getElementById("desativarScrollCheckbox");
+    var moveSidebar = document.getElementById("sidebar");
+
+    checkbox.addEventListener(
+        "change", 
+        function() 
+        {
+            if (checkbox.checked) 
+            {
+                // Mostrar o sidebar quando a checkbox está marcada
+                moveSidebar.style.left = "0px"; 
+            } 
+            else 
+            {
+                // Sumir com o sidebar quando a checkbox está desmarcada
+                moveSidebar.style.left = "-280px"; 
+                
+            }
+        }
+    );
+
+
     
+    let arrow = document.querySelectorAll(".arrow");
+
+    for (var i = 0; i < arrow.length; i++) 
+    {
+        arrow[i].addEventListener(
+            "click", 
+            (e) => 
+            {
+                //selecting main parent of arrow
+
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+            }
+        );
+    }
+
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+
+    $(function () 
+    {
+        resizeScreen();
+
+        $(window).resize(
+            function () 
+            {
+                resizeScreen();
+            }
+        );
+
+        $('.bx-menu').click(
+            function () 
+            {
+                if (document.body.clientWidth > 400) 
+                {
+                    $('.sidebar').toggleClass('close');
+                } 
+                else 
+                {
+                    $('.sidebar').toggleClass('small-screen');
+                }
+            }
+        );
+
+        function resizeScreen() 
+        {
+            if (document.body.clientWidth < 400) 
+            {
+                $('.sidebar').addClass('close');
+            } 
+            else 
+            {
+                $('.sidebar').removeClass('close');
+            }
+        }
+    });
+
+  </script>
 </body>
 </html>
