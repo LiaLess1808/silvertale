@@ -1,4 +1,59 @@
 //================================================================================
+//================================ LOCK SCROLL ===================================
+//================================================================================
+
+document.addEventListener("DOMContentLoaded", function () 
+{
+    var dSCheckbox = document.getElementById("check-icon");
+
+    dSCheckbox.addEventListener("change", function () 
+    {
+    
+        // Adiciona ou remove o ouvinte de eventos de rolagem dependendo do estado da checkbox
+        
+        if (dSCheckbox.checked) 
+        {
+            window.addEventListener("wheel", blockScroll, { passive: false });
+        } 
+        else 
+        {
+            window.removeEventListener("wheel", blockScroll);
+        }
+    });
+
+    function blockScroll(event) 
+    {
+        event.preventDefault();
+    }
+});
+//================================================================================
+//============================= LANG DROPDOWN ====================================
+//================================================================================
+    
+
+    function dropDown() 
+    {
+        document.getElementById("dropDownLang").classList.toggle("showIdiomas");
+    }
+  
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) 
+    {
+        if (!event.target.matches('.dropDownButton') && !event.target.matches('#iconLang')) 
+        {
+            var dropdowns = document.getElementsByClassName("idiomas");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) 
+            {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('showIdiomas')) 
+                {
+                    openDropdown.classList.remove('showIdiomas');
+                }
+            }
+        }
+    }
+//================================================================================
 //===================================== MENU =====================================
 //================================================================================  
     var checkbox = document.getElementById("check-icon");
@@ -81,34 +136,5 @@
             {
                 $('.sidebar').removeClass('close');
             }
-        }
-    });
-
-//================================================================================
-//================================ LOCK SCROLL ===================================
-//================================================================================
-
-    document.addEventListener("DOMContentLoaded", function () 
-    {
-        var dSCheckbox = document.getElementById("check-icon");
-
-        dSCheckbox.addEventListener("change", function () 
-        {
-        
-            // Adiciona ou remove o ouvinte de eventos de rolagem dependendo do estado da checkbox
-            
-            if (dSCheckbox.checked) 
-            {
-                window.addEventListener("wheel", blockScroll, { passive: false });
-            } 
-            else 
-            {
-                window.removeEventListener("wheel", blockScroll);
-            }
-        });
-
-        function blockScroll(event) 
-        {
-            event.preventDefault();
         }
     });

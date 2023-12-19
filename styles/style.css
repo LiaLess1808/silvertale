@@ -11,6 +11,7 @@
     --p-color: #55afaf;
     --p-color-mid:#007a70;
     --p-color-dark:#244747;
+    --p-color-shadow:#55afafab;
 
     --s-color: #191919;
 
@@ -84,6 +85,7 @@ header
     {
         display:flex;
         flex-direction: row;
+        align-items: center;
         gap:20px;
         z-index:100;
     }
@@ -95,6 +97,7 @@ header
             display:flex;
             align-items: center;
             justify-content: center;
+            margin-right:-81px;
         }
             .container-input 
             {
@@ -102,7 +105,7 @@ header
             }
                 .input 
                 {
-                    width: 250px;
+                    width: 150px;
                     padding: 15px 0px 15px 40px;
                     border-radius: 9999px;
                     border: solid 0px #333;
@@ -127,100 +130,112 @@ header
                         .input:focus 
                         {
                             opacity: 1;
-                            width: 350px;
+                            width: 250px;
                         }
 /*=================================================================================================================
 ===================================================== LANG ========================================================
 ===================================================================================================================*/
                         
-        header .right .lang
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding:7px;
-            transition: transform 120ms ease-in;
-            transition: border 120ms ease-in;
-            border: none;
-            background-color: none;
-            border-radius:50%;
-            height: 33px;
-            width: 33px;
-        }
-            header .right .lang i
-            {
-                font-size: 24px;
-            }
-            header .right .lang:hover
-            {
-                border: #ffffff solid 2px;
-                background-color: #c2c2c221;
-                cursor: pointer;
-            }
-            header .right .lang:active{
-                transform: scale(.95);
-            }
-            header .right .lang .idiomas
-            {
-                height:20px;
-            }
-                header .right .lang .idiomas
-                {
-                    display: flex;
-                    flex-direction: column;
-                }
-                    header .right .lang .idiomas ul
-                    {
-                        list-style: none;
-                    }
-                        header .right .lang .idiomas ul li
-                        {
-                            display: flex;
-                            flex-direction: row;
-                            gap:10px;
-                        }
-                    header .right .lang .idiomas .idioma img
-                    {
-                        height:15px;
-                        width:24px;
-                    }
-                    header .right .lang h3
-                    {
-                        color: #ffffff;
-                    }
-                    header .right .lang p
-                    {
-                        color:#ffffff;
-                    }
+        
+    header .right .lang .dropDownButton
+    {
+        right:10px;
+        border: 2px solid white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #000000;
+        position: relative;
+    }
+    #iconLang
+    {
+        font-size: 18px;
+    }
+    .dropDownButton:hover
+    {
+        background-color: var(--p-color)!important;
+    }
+    .lang 
+    {
+        position: relative;
+        display: inline-block;
+    }
+    .idiomas 
+    {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px var(--p-color-shadow);
+        z-index: 1;
+        border-radius: 5%;
+    }
+    .idiomas button 
+    {
+        color: white;
+        background-color: #000000;
+        border: none;
+        text-decoration: none;
+        padding:5px 0px;
+        display: flex;
+        gap:7px;
+        align-items: center;
+        justify-content: center;
+    }
+    .idiomas button:hover 
+    {
+        background-color: var(--p-color-mid);
+    }
+    .showIdiomas 
+    {
+        display:flex;
+        flex-direction: column;
+        border-radius: 5%;
+        padding: 10px;
+    }
+
+      
+    header .right .lang .idiomas .idioma img
+    {
+        height:15px;
+        width:24px;
+    }
+    header .right .lang h3
+    {
+        color: #ffffff;
+    }
+    header .right .lang p
+    {
+        color:#ffffff;
+    }
                 
-        header .right .download
+    header .right .download
+    {
+        background:var(--bg-color);
+        border:var(--p-color) solid 2px;
+        border-radius: 12px;
+        color:#ffffff;
+        padding:10px;
+        font-family: 'Inter';
+        font-weight: 900;
+        font-size: 18px;
+        transition: transform 80ms ease-in;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:10px;
+    }
+        header .right .download i
         {
-            background:var(--bg-color);
-            border:var(--p-color) solid 2px;
-            border-radius: 12px;
-            color:#ffffff;
-            padding:10px;
-            font-family: 'Inter';
-            font-weight: 900;
-            font-size: 18px;
-            transition: transform 80ms ease-in;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap:10px;
+            font-size: 24px;
         }
-            header .right .download i
-            {
-                font-size: 24px;
-            }
-            header .right .download:active{
-                transform: scale(.95);
-            }
-            header .right .download:hover
-            {
-                cursor: pointer;
-            }
+        header .right .download:active{
+            transform: scale(.95);
+        }
+        header .right .download:hover
+        {
+            cursor: pointer;
+        }
 /*=================================================================================================================
 ===================================================== MENU ========================================================
 ===================================================================================================================*/
@@ -527,7 +542,7 @@ header
             font-weight: 900;
             font-size: 40px;
             transition: transform 80ms ease-in;
-            margin: 0 0px -700px 140px;
+            margin: 0 0px -550px 90px;
             position:absolute;
             z-index:2;
         }

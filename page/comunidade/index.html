@@ -1,19 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, 
-                            initial-scale=1.0">
-    
-        <link rel="stylesheet" href="styles/style.css">
-    
-        <link rel="icon" href="assets/logos/silvertale-logo-icon-transformed.png">
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    
-        <title>Silvertale - Comunidade</title>
-    </head>
-<body>
-    <script src = "https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src = "js/main.js"></script>
-</body>
-</html>
+    <html lang="pt-br">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, 
+                                    initial-scale=1.0">
+
+            <link rel="stylesheet" href="styles/style.css">
+
+            <link rel="icon" href="../../assets/logos/silvertale-logo-icon-transformed.png">
+            <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+            <title>Silvertale</title>
+        </head>
+
+        <body>
+            <header>
+                <div class="left">
+                    <div class="menu">
+                        <input hidden="" class="check-icon" id="check-icon" name="check-icon" type="checkbox">
+                        <label class="icon-menu" for="check-icon">
+                            <div class="bar bar--1"></div>
+                            <div class="bar bar--2"></div>
+                            <div class="bar bar--3"></div>
+                        </label>
+                    </div>
+
+                    <div class="logo">
+                        <a href="../../index.html">
+                            <img src="../../assets/logos/silvertale-logo-icon.png" height="60px" alt="Logo da Silvertale">
+                        </a>
+                    </div>
+
+                    <div class="links">
+                        <a href="../../page/noticias/index.html" class="noticias">
+                            <i class='bx bx-news' style='color:#ffffff'></i> NOTÍCIAS
+                        </a>
+
+                        <a href="../../page/loja/index.html" class="loja">
+                            <i class='bx bx-shopping-bag' style='color:#ffffff'></i> LOJA
+                        </a>
+
+                        <a href="../../page/comunidade/index.html" class="comunidade">
+                            <i class='bx bxs-group' style='color:#ffffff'></i> COMUNIDADE
+                        </a>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="search-bar">
+                        <div class="container-input" id="search-bar">
+                            <input type="text" placeholder="Pesquisar" name="text" class="input">
+                            <svg fill="#ffffff" width="22px" height="22px" viewBox="0 0 1920 1920"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 
+                                    677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 
+                                    677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 
+                                    193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 
+                                    790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 
+                                    79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="lang">
+                        <button onclick = "dropDown()" class="dropDownButton">
+                            <i id = "iconLang" class='bx bx-world' style='color:#ffffff'></i>
+                        </button>
+
+                        <div class="idiomas" id="dropDownLang">
+                            <button class="idioma pt-br">
+                                <img src="/assets/flags/ptb-bra-flag.png" alt="Bandeira do Brasil">
+                                <h3>PT-BR</h3>
+                                <p>Português</p>
+                            </button>
+
+                            <button class="idioma en">
+                                <img src="/assets/flags/eng-eua-flag.png" alt="Bandeira dos Estados Unidos">
+                                <h3>EN</h3>
+                                <p>Inglês</p>
+                            </button>
+
+                            <button class="idioma es">
+                                <img src="/assets/flags/esp-spa-flag.png" alt="Bandeira da Espanha">
+                                <h3>ES</h3>
+                                <p>Espanhol</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="download">
+                        DOWNLOAD
+                        <i class='bx bx-download' style='color:#ffffff'></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="sidebar" id="sidebar">
+                <ul class="nav-links">
+                    <li>
+                        <div class="icon-link">
+                            <a href="#">
+                                <i class='bx bxs-group' style='color:#ffffff'></i>
+                                <span class="link_name">COMUNIDADE</span>
+                            </a>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a href="#">EM BREVE</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="icon-link">
+                            <a href="#">
+                                <i class='bx bxs-movie-play'></i>
+                                <span class="link_name">MÍDIA</span>
+                            </a>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a href="#">Cinematics</a></li>
+                            <li><a href="#">OST</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="icon-link">
+                            <a href="#">
+                                <i class='bx bx-joystick'></i>
+                                <span class="link_name">JOGOS</span>
+                            </a>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a href="#">Echoes Of Rain</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="icon-link">
+                            <a href="#">
+                                <i class='bx bx-shopping-bag' style='color:#ffffff'></i>
+                                <span class="link_name">LOJA</span>
+                            </a>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a href="#">EM BREVE</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="icon-link">
+                            <a href="#">
+                                <i class='bx bx-news' style='color:#ffffff'></i>
+                                <span class="link_name">NOTÍCIAS</span>
+                            </a>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a href="#">Novidades</a></li>
+                            <li><a href="#">Destaques</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="icon-link">
+                            <a href="#">
+                                <i class='bx bx-support' style='color:#ffffff' ></i>
+                                <span class="link_name">SUPORTE</span>
+                            </a>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">Requisitos</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    SUPORTE 
+                                    <i  class='bx bx-link-external' 
+                                        style='color:#ffffff'>
+                                    </i>
+                                </a>
+                            </li>
+                            <li><a href="#">Códigos da comunidade</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <main>
+                <h1>EM BREVE </h1>
+            </main>
+
+            <footer>
+                <div class="footer-divider">
+                    <h3> JUNTE-SE À COMUNIDADE: </h3>
+                    <ul class="socials">
+
+                        <a href="https://www.youtube.com/@thelast8416" target=”_blank”>
+                            <i class='bx bxl-youtube' style='color:#ffffff'></i>
+                        </a>
+
+                        <a href="" target=”_blank”>
+                            <i class='bx bxl-instagram' style='color:#ffffff'></i>
+                        </a>
+
+                        <a href="" target=”_blank”>
+                            <i class='bx bxl-discord-alt' style='color:#ffffff'></i>
+                        </a>
+
+                        <a href="" target=”_blank”>
+                            <i class='bx bxl-twitter' style='color:#ffffff'></i>
+                        </a>
+
+                        <a href="" target=”_blank”>
+                            <i class='bx bxl-facebook-circle' style='color:#ffffff'></i>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="footer-content">
+                    <section class="rights">
+                        <p>
+                            © 2023 Silvertale Ent. Silvertale, <strong> Echoes of Rain </strong>
+                            e qualquer logotipo associado são marcas comerciais,
+                            marcas de serviço e/ou marcas registradas da Silvertale Ent.
+                        </p>
+                    </section>
+
+                    <div class="logos">
+                        <div class="silvertale-logo">
+                            <img class="logo-E" src="" alt="">
+                            <img class="logo-S" src="../../assets/logos/silvertale-logo-icon-transformed.png" alt="Silvertale Logo">
+                        </div>
+                    </div>
+
+                    <div class="politics">
+                        <div class="privacidade">
+                            <a href="">POLÌTICA DE PRIVACIDADE</a>
+                        </div>
+                        <div class="termos">
+                            <a href="">TERMOS DE SERVIÇO</a>
+                        </div>
+                    </div>
+                    <div class="age">
+                        <img src="../../assets/marketing-images/age-class.png"
+                            alt="Classificação Indicativa Não Recomendado para Menores de 16 anos.">
+                    </div>
+                </div>
+            </footer>
+            <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+            <script src="../../js/main.js"></script>
+        </body>
+    </html>
