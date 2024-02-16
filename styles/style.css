@@ -614,7 +614,7 @@ header
         .news
         {
             height:30rem;
-            background-image: url('/assets/EOR-imagens/morto-bunker.png') ;
+            background-image: url('../assets/EOR-imagens/morto-bunker.png') ;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -635,7 +635,7 @@ header
         .about-world
         {
             height:30rem;
-            background-image: url('/assets/EOR-imagens/exploracao.png') ;
+            background-image: url('../assets/EOR-imagens/exploracao.png') ;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -656,7 +656,7 @@ header
         .about-game
         {
             height:30rem;
-            background-image: url('/assets/EOR-imagens/robos.png');
+            background-image: url('../assets/EOR-imagens/robos.png');
             background-repeat: no-repeat;
             background-position: baseline;
             background-size: cover;
